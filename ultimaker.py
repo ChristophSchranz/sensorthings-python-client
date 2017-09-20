@@ -21,7 +21,8 @@ def create_ultimaker(server):
         name='Ultimaker 2',
         description='3D printer Ultimaker 2 in IoT Lab',
         properties={
-            'specification': 'https://ultimaker.com/file/download/productgroup/Ultimaker%202+%20specification%20sheet.pdf/5819be416ae76.pdf'}
+            'specification': 'https://ultimaker.com/file/download/productgroup/Ultimaker%202+%20specification%20sheet.pdf/5819be416ae76.pdf',
+            'isprong_uuid': '77371300-a534-4416-a640-39c559c34e13'}
     ).get('@iot.id')
 
     # ********************************************************************************************************
@@ -94,7 +95,8 @@ def create_ultimaker(server):
     amb_temp_op_id = st_client.post_observed_property(
         name='Ambient Temperature',
         description='Temperature of surrounding during print.',
-        definition='http://www.qudt.org/qudt/owl/1.0.0/quantity/Instances.html#ThermodynamicTemperature').get('@iot.id')
+        definition='http://www.qudt.org/qudt/owl/1.0.0/quantity/Instances.html#ThermodynamicTemperature').get(
+        '@iot.id')
     amb_temp_ds_id = st_client.post_datastream(
         name='Ambient Temperature DS',
         description='Observations of temperature of surrounding during print.',
@@ -115,7 +117,8 @@ def create_ultimaker(server):
     bed_temp_op_id = st_client.post_observed_property(
         name='Bed Temperature',
         description='Temperature of base plate during print.',
-        definition='http://www.qudt.org/qudt/owl/1.0.0/quantity/Instances.html#ThermodynamicTemperature').get('@iot.id')
+        definition='http://www.qudt.org/qudt/owl/1.0.0/quantity/Instances.html#ThermodynamicTemperature').get(
+        '@iot.id')
     bed_temp_ds_id = st_client.post_datastream(
         name='Bed Temperature DS',
         description='Observations of temperature of base plate during print.',
@@ -136,7 +139,8 @@ def create_ultimaker(server):
     nozzle_temp_op_id = st_client.post_observed_property(
         name='Nozzle Temperature',
         description='Temperature of nozzle during print.',
-        definition='http://www.qudt.org/qudt/owl/1.0.0/quantity/Instances.html#ThermodynamicTemperature').get('@iot.id')
+        definition='http://www.qudt.org/qudt/owl/1.0.0/quantity/Instances.html#ThermodynamicTemperature').get(
+        '@iot.id')
     nozzle_temp_ds_id = st_client.post_datastream(
         name='Nozzle Temperature DS',
         description='Observations of temperature of nozzle during print.',
